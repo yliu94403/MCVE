@@ -7,13 +7,13 @@ using System.Threading.Tasks;
 
 public class FirebaseController : MonoBehaviour
 {
-    public string Email;
+    public string Email1;
 
-    public string Password;
+    public string Password1;
 
-    public string ProjectID;
+    public string Email2;
 
-    public string CustomerID;
+    public string Password2;
 
     Firebase.FirebaseApp myApp1;
 
@@ -40,10 +40,25 @@ public class FirebaseController : MonoBehaviour
         myApp2 = Firebase.FirebaseApp.Create(appOptions2);
     }
 
-    public async void Login()
+    public async void LoginApp1()
+    {
+        FirebaseAuth auth = FirebaseAuth.GetAuth(myApp1); ;
+        Task<FirebaseUser> authTask = auth.SignInWithEmailAndPasswordAsync(Email1, Password1);
+
+        await authTask;
+
+        if (authTask.IsCompleted)
+        {
+            Debug.Log(authTask.Result.UserId);
+
+            getUserSnapshot(authTask.Result.UserId);
+        }
+    }
+
+    public async void LoginApp2()
     {
         FirebaseAuth auth = FirebaseAuth.GetAuth(myApp2); ;
-        Task<FirebaseUser> authTask = auth.SignInWithEmailAndPasswordAsync(Email,Password);
+        Task<FirebaseUser> authTask = auth.SignInWithEmailAndPasswordAsync(Email2,Password2);
 
         await authTask;
 
