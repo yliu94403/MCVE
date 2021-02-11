@@ -1,0 +1,37 @@
+{
+  "client": [
+    {
+      "services": {
+        "appinvite_service": {
+          "status": 1
+        }, 
+        "analytics_service": {
+          "status": 0
+        }
+      }, 
+      "oauth_client": [
+        {
+          "client_id": "31386850366-3qtslvvshdtgc70qkqjf0sovbk03aecc.apps.googleusercontent.com"
+        }
+      ], 
+      "api_key": [
+        {
+          "current_key": "AIzaSyCP6nWVWjRWs4lrOXlZDx4QdUHyrE8q8HQ"
+        }
+      ], 
+      "client_info": {
+        "mobilesdk_app_id": "1:31386850366:ios:f06e854aec20c2ba07ad6f", 
+        "android_client_info": {
+          "package_name": "com.metaview.MVRemote"
+        }
+      }
+    }
+  ], 
+  "configuration_version": "1", 
+  "project_info": {
+    "storage_bucket": "campfire-35eff.appspot.com", 
+    "project_id": "campfire-35eff", 
+    "firebase_url": "https://campfire-35eff.firebaseio.com", 
+    "project_number": "31386850366"
+  }
+}
